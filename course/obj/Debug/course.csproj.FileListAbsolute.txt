@@ -1,0 +1,9 @@
+E:\Univer 4 kurs\Курсач\course\course\bin\Debug\course.exe.config
+E:\Univer 4 kurs\Курсач\course\course\bin\Debug\course.exe
+E:\Univer 4 kurs\Курсач\course\course\bin\Debug\course.pdb
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.csprojResolveAssemblyReference.cache
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.Form1.resources
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.Properties.Resources.resources
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.csproj.GenerateResource.Cache
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.exe
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.pdb
