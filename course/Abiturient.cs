@@ -10,7 +10,7 @@ namespace course
     {
         public string Surname;
         public string Name;
-        public string Patronymic;
+        public string LastName;
 
         public string Birthday;
         public string Nationality;
@@ -30,5 +30,21 @@ namespace course
         public int Complex;
         public string PlusComplex;
         public string Contract;
+
+        public void SortAbit(List<Abiturient> a) 
+        {
+            for (int i = 0; i < a.Count; i++)
+            {
+                for (int k = i + 1; k < a.Count - 1; k++)
+                {
+                    if (String.Compare(a[i].Surname, a[k].Surname) == 1)
+                    {
+                        Abiturient j = a[i];
+                        a[i] = a[k];
+                        a[k] = j;
+                    }
+                }
+            }
+        }
     }
 }

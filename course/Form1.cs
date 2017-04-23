@@ -15,10 +15,11 @@ namespace course
     public partial class Form1 : Form
     {
         List<Abiturient> abiturient = new List<Abiturient>();
+        Abiturient abit1 = new Abiturient();
 
-        string name;
 
-        private void Read_List() // считывание данных с текстового документа
+
+        private void Read_List()
         {
             StreamReader stream = new StreamReader("Abiturient.txt");
             abiturient.Clear();
@@ -30,7 +31,7 @@ namespace course
 
                 abiturient[abiturient.Count - 1].Surname = stream.ReadLine();
                 abiturient[abiturient.Count - 1].Name = stream.ReadLine();
-                abiturient[abiturient.Count - 1].Patronymic = stream.ReadLine();
+                abiturient[abiturient.Count - 1].LastName = stream.ReadLine();
 
                 abiturient[abiturient.Count - 1].Birthday = stream.ReadLine();
                 abiturient[abiturient.Count - 1].Nationality = stream.ReadLine();
@@ -58,7 +59,7 @@ namespace course
             Init_comboBoxBase();
         }
 
-        private void Init_comboBoxBase() // считывание фамилий в comboBox
+        private void Init_comboBoxBase() 
         {
             comboBoxBase.Items.Clear();
 
@@ -66,7 +67,7 @@ namespace course
                 comboBoxBase.Items.Add(abiturient[i].Surname);
         }
 
-        private void PrintA() // заполнение dataGridViewInformation
+        private void PrintA() 
         {
             dataGridViewInformation.Rows.Clear();
 
@@ -76,7 +77,7 @@ namespace course
             }
         }
 
-        internal DataGridViewRow AddToGrid(int i, List<Abiturient> abit) // заполнение dataGridView по строкам
+        internal DataGridViewRow AddToGrid(int i, List<Abiturient> abit) 
         {
             DataGridViewRow row = new DataGridViewRow();
 
@@ -86,8 +87,8 @@ namespace course
             DataGridViewCell Name = new DataGridViewTextBoxCell();
             Name.Value = abit[i].Name;
 
-            DataGridViewCell Patronymic = new DataGridViewTextBoxCell();
-            Patronymic.Value = abit[i].Patronymic;
+            DataGridViewCell LastName = new DataGridViewTextBoxCell();
+            LastName.Value = abit[i].LastName;
 
             DataGridViewCell Birthday = new DataGridViewTextBoxCell();
             Birthday.Value = abit[i].Birthday;
@@ -135,7 +136,7 @@ namespace course
 
             row.Cells.Add(Surname);
             row.Cells.Add(Name);
-            row.Cells.Add(Patronymic);
+            row.Cells.Add(LastName);
             row.Cells.Add(Birthday);
             row.Cells.Add(Nationality);
             row.Cells.Add(PlaceLive);
@@ -172,6 +173,79 @@ namespace course
         private void добавитьАбитуриентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Choosen();
+        }
+
+        public void Choosen() 
+        {
+            if (comboBoxBase.SelectedItem != null) 
+            {
+                dataGridViewInformation.Rows.Clear();
+
+                int count = 0;
+
+                List<Abiturient> choosen = new List<Abiturient>(); 
+                abit1.SortAbit(choosen);
+
+                for (int i = 0; i < abiturient.Count; i++)
+                {
+                    if (abiturient[i].Surname == comboBoxBase.SelectedItem.ToString())
+                    {
+                        choosen.Add(new Abiturient());
+                        choosen[choosen.Count - 1] = new Abiturient();
+
+                        choosen[choosen.Count - 1].Surname = abiturient[i].Surname;
+                        choosen[choosen.Count - 1].Name = abiturient[i].Name;
+                        choosen[choosen.Count - 1].LastName = abiturient[i].LastName;
+
+                        choosen[choosen.Count - 1].Birthday = abiturient[i].Birthday;
+                        choosen[choosen.Count - 1].Nationality = abiturient[i].Nationality;
+
+                        choosen[choosen.Count - 1].PlaceLive = abiturient[i].PlaceLive;
+
+                        choosen[choosen.Count - 1].Document = abiturient[i].Document;
+                        choosen[choosen.Count - 1].NumberDocument = abiturient[i].NumberDocument;
+
+                        choosen[choosen.Count - 1].NumberTelefone = abiturient[i].NumberTelefone;
+                        choosen[choosen.Count - 1].Email = abiturient[i].Email;
+
+                        choosen[choosen.Count - 1].Average = abiturient[i].Average;
+                        choosen[choosen.Count - 1].Subject1 = abiturient[i].Subject1;
+                        choosen[choosen.Count - 1].Subject2 = abiturient[i].Subject2;
+                        choosen[choosen.Count - 1].Subject3 = abiturient[i].Subject3;
+                        choosen[choosen.Count - 1].Complex = abiturient[i].Complex;
+                        choosen[choosen.Count - 1].PlusComplex = abiturient[i].PlusComplex;
+                        choosen[choosen.Count - 1].Contract = abiturient[i].Contract;
+
+                        dataGridViewInformation.Rows.Add(AddToGrid(count, choosen)); 
+
+                        count++;
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abit1.SortAbit(abiturient);
+            Read_List();
+            
+        }
+
+        private void добавитиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add newForm = new add(); 
+            newForm.Owner = this;
+            newForm.ShowDialog();
         }
     }
 }

@@ -7,3 +7,4 @@ E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.Properties.Resource
 E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.csproj.GenerateResource.Cache
 E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.exe
 E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.pdb
+E:\Univer 4 kurs\Курсач\course\course\obj\Debug\course.add.resources
