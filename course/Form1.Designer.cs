@@ -31,12 +31,24 @@ namespace course
         {
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewInformation = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.выбратьАбитуриентовПоКатегорииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.змінитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видалатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxBase = new System.Windows.Forms.ComboBox();
             this.ColumnSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,20 +61,6 @@ namespace course
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.выбратьАбитуриентовПоКатегорииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxBase = new System.Windows.Forms.ComboBox();
-            this.добавитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.змінитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.видалатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformation)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +78,6 @@ namespace course
             // 
             this.dataGridViewInformation.AllowUserToAddRows = false;
             this.dataGridViewInformation.AllowUserToOrderColumns = true;
-            this.dataGridViewInformation.AllowUserToResizeColumns = false;
             this.dataGridViewInformation.AllowUserToResizeRows = false;
             this.dataGridViewInformation.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewInformation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -92,7 +89,6 @@ namespace course
             this.ColumnPatronymic,
             this.ColumnBirthday,
             this.ColumnNationality,
-            this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -104,135 +100,14 @@ namespace course
             this.Column10,
             this.Column11,
             this.Column12,
-            this.Column13,
-            this.Column14});
+            this.Column13});
             this.dataGridViewInformation.Location = new System.Drawing.Point(0, 57);
             this.dataGridViewInformation.Name = "dataGridViewInformation";
             this.dataGridViewInformation.RowTemplate.Height = 35;
             this.dataGridViewInformation.RowTemplate.ReadOnly = true;
             this.dataGridViewInformation.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInformation.Size = new System.Drawing.Size(915, 439);
+            this.dataGridViewInformation.Size = new System.Drawing.Size(915, 481);
             this.dataGridViewInformation.TabIndex = 15;
-            // 
-            // ColumnSurname
-            // 
-            this.ColumnSurname.HeaderText = "Прізвище";
-            this.ColumnSurname.Name = "ColumnSurname";
-            this.ColumnSurname.ReadOnly = true;
-            this.ColumnSurname.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnSurname.Width = 155;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Ім\'я";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 140;
-            // 
-            // ColumnPatronymic
-            // 
-            this.ColumnPatronymic.HeaderText = "Побатькові";
-            this.ColumnPatronymic.Name = "ColumnPatronymic";
-            this.ColumnPatronymic.ReadOnly = true;
-            this.ColumnPatronymic.Width = 120;
-            // 
-            // ColumnBirthday
-            // 
-            this.ColumnBirthday.HeaderText = "Дата народження";
-            this.ColumnBirthday.Name = "ColumnBirthday";
-            this.ColumnBirthday.ReadOnly = true;
-            this.ColumnBirthday.Width = 105;
-            // 
-            // ColumnNationality
-            // 
-            this.ColumnNationality.HeaderText = "Громаданство";
-            this.ColumnNationality.Name = "ColumnNationality";
-            this.ColumnNationality.ReadOnly = true;
-            this.ColumnNationality.Width = 120;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Місце народження";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Місце проживания";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Тип документа";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Серія/номер";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Номер телефону";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Адрес електронної почти";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Середній бал атетстату";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Перший предмет";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Другий предмет";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Третій предмет";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Сокупність балів";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Додаткові бали";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Контракт";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Університет";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -262,6 +137,24 @@ namespace course
             this.добавитьАбитуриентаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.добавитьАбитуриентаToolStripMenuItem.Text = "Правка";
             this.добавитьАбитуриентаToolStripMenuItem.Click += new System.EventHandler(this.добавитьАбитуриентаToolStripMenuItem_Click);
+            // 
+            // добавитиToolStripMenuItem
+            // 
+            this.добавитиToolStripMenuItem.Name = "добавитиToolStripMenuItem";
+            this.добавитиToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.добавитиToolStripMenuItem.Text = "Добавити";
+            // 
+            // змінитиToolStripMenuItem
+            // 
+            this.змінитиToolStripMenuItem.Name = "змінитиToolStripMenuItem";
+            this.змінитиToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.змінитиToolStripMenuItem.Text = "Змінити";
+            // 
+            // видалатиToolStripMenuItem
+            // 
+            this.видалатиToolStripMenuItem.Name = "видалатиToolStripMenuItem";
+            this.видалатиToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.видалатиToolStripMenuItem.Text = "Видалати";
             // 
             // справкаToolStripMenuItem
             // 
@@ -322,23 +215,121 @@ namespace course
             this.comboBoxBase.Size = new System.Drawing.Size(574, 21);
             this.comboBoxBase.TabIndex = 13;
             // 
-            // добавитиToolStripMenuItem
+            // ColumnSurname
             // 
-            this.добавитиToolStripMenuItem.Name = "добавитиToolStripMenuItem";
-            this.добавитиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.добавитиToolStripMenuItem.Text = "Добавити";
+            this.ColumnSurname.HeaderText = "Прізвище";
+            this.ColumnSurname.Name = "ColumnSurname";
+            this.ColumnSurname.ReadOnly = true;
+            this.ColumnSurname.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnSurname.Width = 155;
             // 
-            // змінитиToolStripMenuItem
+            // ColumnName
             // 
-            this.змінитиToolStripMenuItem.Name = "змінитиToolStripMenuItem";
-            this.змінитиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.змінитиToolStripMenuItem.Text = "Змінити";
+            this.ColumnName.HeaderText = "Ім\'я";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Width = 140;
             // 
-            // видалатиToolStripMenuItem
+            // ColumnPatronymic
             // 
-            this.видалатиToolStripMenuItem.Name = "видалатиToolStripMenuItem";
-            this.видалатиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.видалатиToolStripMenuItem.Text = "Видалати";
+            this.ColumnPatronymic.HeaderText = "Побатькові";
+            this.ColumnPatronymic.Name = "ColumnPatronymic";
+            this.ColumnPatronymic.ReadOnly = true;
+            this.ColumnPatronymic.Width = 120;
+            // 
+            // ColumnBirthday
+            // 
+            this.ColumnBirthday.HeaderText = "Дата народження";
+            this.ColumnBirthday.Name = "ColumnBirthday";
+            this.ColumnBirthday.ReadOnly = true;
+            this.ColumnBirthday.Width = 105;
+            // 
+            // ColumnNationality
+            // 
+            this.ColumnNationality.HeaderText = "Громаданство";
+            this.ColumnNationality.Name = "ColumnNationality";
+            this.ColumnNationality.ReadOnly = true;
+            this.ColumnNationality.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Місце проживания";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 115;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Тип документа";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Серія/номер";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Номер телефону";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Адрес електронної почти";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Середній бал атетстату";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column8.HeaderText = "Перший предмет";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 108;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "Другий предмет";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 105;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column10.HeaderText = "Третій предмет";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 101;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Сокупність балів";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Додаткові бали";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Контракт";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             // 
             // Form1
             // 
@@ -375,12 +366,14 @@ namespace course
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.DataGridView dataGridViewInformation;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripMenuItem добавитиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem змінитиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem видалатиToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatronymic;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBirthday;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNationality;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -393,11 +386,6 @@ namespace course
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.ToolStripMenuItem добавитиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem змінитиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem видалатиToolStripMenuItem;
-        
     }
 }
 

@@ -35,7 +35,6 @@ namespace course
                 abiturient[abiturient.Count - 1].Birthday = stream.ReadLine();
                 abiturient[abiturient.Count - 1].Nationality = stream.ReadLine();
 
-                abiturient[abiturient.Count - 1].PlaceBirth = stream.ReadLine();
                 abiturient[abiturient.Count - 1].PlaceLive = stream.ReadLine();
 
                 abiturient[abiturient.Count - 1].Document = stream.ReadLine();
@@ -51,7 +50,7 @@ namespace course
                 abiturient[abiturient.Count - 1].Complex = Int32.Parse(stream.ReadLine());
                 abiturient[abiturient.Count - 1].PlusComplex = stream.ReadLine();
                 abiturient[abiturient.Count - 1].Contract = stream.ReadLine();
-                abiturient[abiturient.Count - 1].University = stream.ReadLine();
+              
             }
 
             stream.Close();
@@ -96,8 +95,6 @@ namespace course
             DataGridViewCell Nationality = new DataGridViewTextBoxCell();
             Nationality.Value = abit[i].Nationality;
 
-            DataGridViewCell PlaceBirth = new DataGridViewTextBoxCell();
-            PlaceBirth.Value = abit[i].PlaceBirth;
 
             DataGridViewCell PlaceLive = new DataGridViewTextBoxCell();
             PlaceLive.Value = abit[i].PlaceLive;
@@ -135,15 +132,12 @@ namespace course
             DataGridViewCell Contract = new DataGridViewTextBoxCell();
             Contract.Value = abit[i].Contract;
 
-            DataGridViewCell University = new DataGridViewTextBoxCell();
-            University.Value = abit[i].University;
 
             row.Cells.Add(Surname);
             row.Cells.Add(Name);
             row.Cells.Add(Patronymic);
             row.Cells.Add(Birthday);
             row.Cells.Add(Nationality);
-            row.Cells.Add(PlaceBirth);
             row.Cells.Add(PlaceLive);
             row.Cells.Add(Document);
             row.Cells.Add(NumberDocument);
@@ -156,7 +150,6 @@ namespace course
             row.Cells.Add(Complex);
             row.Cells.Add(PlusComplex);
             row.Cells.Add(Contract);
-            row.Cells.Add(University);
 
             return row;
         }

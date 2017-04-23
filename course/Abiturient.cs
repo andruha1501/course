@@ -15,7 +15,6 @@ namespace course
         public string Birthday;
         public string Nationality;
 
-        public string PlaceBirth;
         public string PlaceLive;
 
         public string Document;
@@ -31,6 +30,5 @@ namespace course
         public int Complex;
         public string PlusComplex;
         public string Contract;
-        public string University;
     }
 }
